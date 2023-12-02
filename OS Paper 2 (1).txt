@@ -1,0 +1,12 @@
+yogesh@VITMAC6 os % rm even
+yogesh@VITMAC6 os % rm odd
+yogesh@VITMAC6 os % rm numbers.txt 
+yogesh@VITMAC6 os % ls
+even.sh		hello.sh
+yogesh@VITMAC6 os % rm hello.sh
+yogesh@VITMAC6 os % ls
+even.sh
+yogesh@VITMAC6 os % nano smallest_file.sh
+yogesh@VITMAC6 os % bash smallest_file.sh 
+Smallest file name based on string length: even.sh
+yogesh@VITMAC6 os % 

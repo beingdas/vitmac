@@ -1,0 +1,55 @@
+1)Write the shell scrpit that redirecs all the even umbers to a file called "even" and odd numbers to a file called "odd" from a list of n numbers given as input through file.
+-->
+len=5
+arr=()
+echo "Enter Numbers: "
+for((i=0;i<len;i++));
+do
+        read arr[$i]
+done
+i=0
+j=0
+even=()
+odd=()
+for num in ${arr[@]};
+do
+        if [ $((num % 2)) -eq 0 ];
+        then
+                even[$i]=$num
+                ((i++))
+        else
+                odd[$j]=$num
+                ((j++))
+        fi
+done
+touch even.txt
+echo "${even[@]}" >> "even.txt"
+touch odd.txt
+echo "${odd[@]}" >> "odd.txt"
+echo "Successfully created file and Saved the content in even.txt and odd.txt"
+
+
+2)Write a sheel script to display the smallest file name( in respecr of the string length) among the list of fikes avavilabl in the curret directory
+-->12.sh
+files=$(ls)
+
+smallest_file=""
+smallest_length=99999
+
+
+for file in $files;
+do
+  length=${#file}
+
+
+  if [ $length -lt $smallest_length ]; then
+      smallest_file=$file
+      smallest_length=$length
+  fi
+done
+
+echo "Smallest file name is $smallest_file"
+
+3)Write a shell program to sort an array of numbers using any sort method
+
+ 
